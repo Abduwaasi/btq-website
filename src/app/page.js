@@ -21,8 +21,16 @@ import ContactForm from '@/components/ContactForm'
 
 
 function Home() {
-
+  const [showToast, setShowToast] = useState(false)
+  const [showError, setShowError] = useState(false)
+  const [message, setMessage] = useState("")
   return <>
+    {showToast && <div className='bg-green px-4 py-2 fixed max-w-[300px] right-0 top-[70px] z-50'>
+      <span className='text-white text-lg font-bold '>{message}</span>
+    </div>}
+    {showError && <div className='bg-red px-4 py-2 fixed max-w-[300px] right-0 top-[70px] z-50'>
+      <span className='text-white text-lg font-bold '>{message}</span>
+    </div>}
 
     <Header />
     <section className={`w-full flex flex-col items-center justify-center py-20 px-4 bg-left-top bg-[url('../../public/images/cart.png')]  bg-no-repeat bg-cover `}>
@@ -58,7 +66,7 @@ function Home() {
         <div className='py-8 px-4'>
           <h3 className='text-[45px] font-extrabold text-dark leading-normal mb-4'>Get in <span className='text-red'>Touch</span></h3>
           <p className='text-base font-normal leading-snug text-dark'>Your feedback matters. Whether you have a question, suggestion, or just want to say hello, we'd love to hear from you. Get in touch and let us make your shopping experience even better!"</p>
-          <ContactForm />
+          <ContactForm setShowToast={setShowToast} setMessage={setMessage} setShowError={setShowError} />
           <div className='flex flex-row justify-between items-start md:items-center'>
             <div className='flex items-center gap-4'>
               <Image src={phone2} width={25} height={25} alt='' className='hidden md:block' />

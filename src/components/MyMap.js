@@ -35,8 +35,8 @@ function MyMap() {
             mapContainerStyle={containerStyle}
             center={center}
             zoom={10}
-        // onLoad={onLoad}
-        // onUnmount={onUnmount}
+            onLoad={onLoad}
+            onUnmount={onUnmount}
         >
             { /* Child components, such as markers, info windows, etc. */}
             <div>Hello map</div>

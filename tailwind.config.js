@@ -14,7 +14,8 @@ module.exports = {
       'light-yellow': 'rgba(255, 204, 0, 0)',
       'dark-yellow': "#FFCC00",
       'gray': '#E0E0E0',
-      'light-gray': '#828282'
+      'light-gray': '#828282',
+      'green': '#34d399'
     },
     extend: {
       backgroundImage: {
