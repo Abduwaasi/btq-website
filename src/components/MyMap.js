@@ -3,7 +3,8 @@ import { useState, useCallback, memo } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api"
 const containerStyle = {
     width: '100%',
-    height: '100%'
+    height: '100%',
+    overflow: "hidden"
 };
 
 const center = {
@@ -13,7 +14,7 @@ const center = {
 function MyMap() {
 
     const { isLoaded } = useJsApiLoader({
-        id: "abdulwaasi",
+        id: "google-map-script",
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY
     })
     const [map, setMap] = useState(null)
@@ -34,8 +35,8 @@ function MyMap() {
             mapContainerStyle={containerStyle}
             center={center}
             zoom={10}
-            onLoad={onLoad}
-            onUnmount={onUnmount}
+        // onLoad={onLoad}
+        // onUnmount={onUnmount}
         >
             { /* Child components, such as markers, info windows, etc. */}
             <div>Hello map</div>
@@ -45,3 +46,4 @@ function MyMap() {
 
 
 export default memo(MyMap)
+

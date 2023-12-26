@@ -1,33 +1,21 @@
-import Image from "next/image"
-import Carousel from "react-multi-carousel";
-import 'react-multi-carousel/lib/styles.css';
+import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import frame from "../../public/images/frame.png"
 import frame1 from "../../public/images/frame1.png"
-function AppCarousel() {
 
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 1,
-        },
-
-    };
+const AppCarousel = () => {
     return (
-
-        <div className="w-full">
-            <Carousel
-                responsive={responsive}
-                infinite={false}
-                autoPlay={true}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-
-            >
-                <Image src={frame} className="w-full h-fit" />
-                <Image src={frame1} className="w-full h-fit" />
-            </Carousel>
-
-        </div>
+        <Carousel
+            showThumbs={false}
+            autoPlay={true}
+            infiniteLoop={true}
+            interval={3000}
+        >
+            <Image src={frame} alt="BTQ hero slide 1" />
+            <Image src={frame1} alt="BTQ hero slide 2" />
+        </Carousel>
     )
 }
 

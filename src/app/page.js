@@ -18,14 +18,14 @@ import email2 from "../../public/images/email2.png"
 import categories from "../data"
 import AppCarousel from '@/components/AppCarousel'
 import ContactForm from '@/components/ContactForm'
-// import Slider from '@/components/Slider'
+
 
 function Home() {
 
   return <>
 
     <Header />
-    <section className={`w-full flex flex-col items-center justify-center pt-20 px-4 bg-left-top bg-[url('../../public/images/cart.png')]  bg-no-repeat bg-cover `}>
+    <section className={`w-full flex flex-col items-center justify-center py-20 px-4 bg-left-top bg-[url('../../public/images/cart.png')]  bg-no-repeat bg-cover `}>
       <div className=' flex flex-col items-center text-center'>
         <Image src={btqLogo} alt='BTQ store logo' width={300} height={146} />
         <h1 className='font-normal text-dark leading-none text-center text-[40px] lg:text-6xl xl:text-[84px]'>Quality products <br /> at affordable prices</h1>
@@ -34,19 +34,21 @@ function Home() {
           <LinkButton text="Popular categories" href="#category" icon={star} color="black" />
         </div>
       </div>
-      <div>
+      <div className='mt-10'>
         <AppCarousel />
       </div>
     </section>
-    <section className='bg-white py-8 px-4 lg:px-8 xl:px-32' id='category'>
-      <h2 className='text-lg lg:text-[45px] font-bold leading-snug text-dark mb-8'>Popular Products Categories</h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
-        {categories.map(cat => (
-          <div key={cat.id} className='bg-white'>
-            <Image src={cat.image} className='w-full' alt={`${cat.category} image`} width="auto" height="auto" />
-            <h6 className='text-black text-xl font-bold leading-snug my-4'>{cat.category}</h6>
-          </div>
-        ))}
+    <section className='bg-white py-8 px-4 lg:px-8 xl:px-32 flex items-center justify-center' id='category'>
+      <div className='w-full max-w-[1550px]'>
+        <h2 className='text-lg lg:text-[45px] font-bold leading-snug text-dark mb-8'>Popular Products Categories</h2>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+          {categories.map(cat => (
+            <div key={cat.id} className='bg-white'>
+              <Image src={cat.image} className='w-full' alt={`${cat.category} image`} width="auto" height="auto" />
+              <h6 className='text-black text-xl font-bold leading-snug my-4'>{cat.category}</h6>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
     <section className='relative w-full flex items-center justify-center h-auto px-4 ' id="location">

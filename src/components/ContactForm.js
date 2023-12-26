@@ -21,34 +21,20 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-
-            const response = await fetch("/api", {
+            const response = await fetch("api/contact", {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formData)
             })
-            const data = await response.json();
-
-            if (data.success) {
-                // Handle successful form submission, e.g., show a success message
-                console.log('Form submitted successfully');
-            } else {
-                // Handle form submission failure, e.g., display an error message
-                console.error('Form submission failed:', data.error);
-            }
-            setFormData({
-                name: "",
-                email: "",
-                number: "",
-                platform: "",
-                message: ""
-            })
+            console.log("Form submitted succesfully")
 
         } catch (error) {
-            console.log("Error submitting form", error)
+            console.log("Error sunmitting form", error)
         }
+
+
     }
 
 
