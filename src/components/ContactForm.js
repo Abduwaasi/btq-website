@@ -46,10 +46,11 @@ function ContactForm({ setShowToast, setMessage, setShowError }) {
             let isValid = true
             if (!isEmail(email)) {
                 isValid = false
+                showErrorMessage("Invalid email address")
             }
             if (name == "" || number == "" || platform == "" || message == "") {
                 isValid = false
-                showErrorMessage("Invalid email address")
+
             }
 
             if (isValid) {
