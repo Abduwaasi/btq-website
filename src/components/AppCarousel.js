@@ -12,6 +12,7 @@ const AppCarousel = () => {
             autoPlay={true}
             infiniteLoop={true}
             interval={3000}
+            showStatus={false}
         >
             <Image src={frame} alt="BTQ hero slide 1" />
             <Image src={frame1} alt="BTQ hero slide 2" />

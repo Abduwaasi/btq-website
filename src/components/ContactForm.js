@@ -89,6 +89,7 @@ function ContactForm({ setShowToast, setMessage, setShowError }) {
             <Input type="email" placeholder='Email' required name='email' id='email' value={formData.email} onChange={handleChange} />
             <Input type="tel" placeholder='Phone Number' required name='number' id='number' value={formData.number} onChange={handleChange} />
             <select name="platform" id="platform" value={formData.platform} onChange={handleChange} required className="w-full rounded-2xl border border-solid mb-5 border-gray py-3 px-5 text-base leading-tight font-normal text-light-gray placeholder:text-base placeholder:text-light-gray focus:outline-none focus:border-spacing-2 focus:border-light-gray">
+                <option value="">How did you find us?</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="friend-and-family">Friends & Family</option>
                 <option value="radio">Radio</option>

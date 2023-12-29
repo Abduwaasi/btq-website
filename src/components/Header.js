@@ -8,8 +8,8 @@ import email from "../../public/images/email.png"
 
 function Header() {
     return (
-        <header className="bg-red w-full h-[66px] flex flex-row px-4 lg:px-8 xl:px-16 ">
-            <nav className="w-full h-full flex justify-between items-center ">
+        <header className="bg-red w-full h-[66px] flex items-center justify-center px-4 lg:px-8 xl:px-16 ">
+            <nav className="w-full h-full flex justify-between items-center max-w-[1900px] ">
                 <div className="space-y-1  lg:flex lg:flex-row lg:space-x-8 lg:items-center lg:space-y-0">
                     <div className="flex space-x-2 items-center">
                         <Image src={phone} width={20} height={20} alt="Phone Icon" />
