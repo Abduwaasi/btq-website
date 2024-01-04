@@ -32,10 +32,10 @@ export default function RootLayout({ children }) {
 w.gbwawc = {
 url: u,
 options: {
-        waId: "+234 08167641246",
+        waId: "+234 08101411444",
         siteName: "BTQ Superstore",
         siteTag: "Usually reply in 5 minutes",
-        siteLogo: "https://waw.gallabox.com/chatbotavatars/1.png",
+        siteLogo: "https://i.ibb.co/W5LK2dg/BTQ-PP.jpg",
         widgetPosition: "RIGHT",
         triggerMessage: "",
         welcomeMessage: "Welcome to BTQ Superstore",
@@ -56,6 +56,5 @@ h.parentNode.insertBefore(j, h);
     </html>
   )
 }
-
 
 

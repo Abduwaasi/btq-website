@@ -21,15 +21,15 @@ function Header() {
                     </div>
                 </div>
                 <div className="flex space-x-2">
-                    <Link href="#">
+                    <a href="https://web.facebook.com/btqnigeria" target="_blank">
                         <Image src={facebook} width={20} height={20} alt="Facebook Icon" />
-                    </Link>
-                    <Link href="#">
-                        <Image src={instagram} width={20} height={20} alt="Facebook Icon" />
-                    </Link>
-                    <Link href="#">
-                        <Image src={tiktok} width={20} height={20} alt="Facebook Icon" />
-                    </Link>
+                    </a>
+                    <a href="https://www.instagram.com/btqnigeria" target="_blank">
+                        <Image src={instagram} width={20} height={20} alt="Instagram Icon" />
+                    </a>
+                    <a href="https://tiktok.com/btqonline" target="_blank">
+                        <Image src={tiktok} width={20} height={20} alt="Tiktok Icon" />
+                    </a>
 
                 </div>
             </nav>
