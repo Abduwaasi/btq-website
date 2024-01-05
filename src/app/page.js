@@ -67,7 +67,7 @@ function Home() {
       <div className='w-full xl:w-[84%] max-w-[1900px] bg-white  rounded-xl flex flex-col lg:flex-row lg:my-20'>
         <div className='py-8 px-4 w-full'>
           <h3 className='text-[45px] font-extrabold text-dark leading-normal mb-4'>Get in <span className='text-red'>Touch</span></h3>
-          <p className='text-base font-normal leading-snug text-dark'>Your feedback matters. Whether you have a question, suggestion, or just want to say hello, we'd love to hear from you. Get in touch and let us make your shopping experience even better!"</p>
+          <p className='text-base font-normal leading-snug text-dark'>Your feedback matters. Whether you have a question, suggestion, or just want to say hello, we'd love to hear from you. Get in touch and let us make your shopping experience even better</p>
           <ContactForm setShowToast={setShowToast} setMessage={setMessage} setShowError={setShowError} />
           <div className='flex flex-row justify-between items-start md:items-center'>
             <div className='flex items-center gap-4'>

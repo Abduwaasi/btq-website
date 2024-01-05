@@ -1,20 +1,25 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "PrivateEmail",
+    host: "mail.privateemail.com",
+    port: 465, // For secure connections (recommended)
+    secure: true, // Enable secure connection
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD
     }
 })
+
+
 export async function POST(request) {
 
     try {
         const res = await request.json()
         const { name, email, number, platform, message } = res
         const mailOption = {
-            from: email,
-            to: 'wasiuadekunle73@gmail.com', // Replace with your recipient email
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,// Replace with your recipient email
             subject: 'New Contact Form Submission',
             html: `
             <h2>You have received a new contact form submission on your website.Below are the details:</h2>

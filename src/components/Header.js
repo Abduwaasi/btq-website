@@ -27,7 +27,7 @@ function Header() {
                     <a href="https://www.instagram.com/btqnigeria" target="_blank">
                         <Image src={instagram} width={20} height={20} alt="Instagram Icon" />
                     </a>
-                    <a href="https://tiktok.com/btqonline" target="_blank">
+                    <a href="https://www.tiktok.com/@btqnigeria" target="_blank">
                         <Image src={tiktok} width={20} height={20} alt="Tiktok Icon" />
                     </a>
 

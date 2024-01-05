@@ -2,6 +2,8 @@ import { Inter } from 'next/font/google'
 import Script from "next/script"
 import './globals.css'
 
+const inter = Inter({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
+
 
 
 export const metadata = {
@@ -20,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body>
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
       <Script
